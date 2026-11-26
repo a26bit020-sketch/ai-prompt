@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">✦ PromptCraft AI</div>
+            <h1>Create Better AI Prompts</h1>
+            <p>
+                Turn your ideas into powerful prompts.
+                Designed especially for college students.
+            </p>
+        </header>
+
+        <main class="main-content">
+
+            <!-- Input Section -->
+            <section class="input-section">
+
+                <h2>Build Your Prompt</h2>
+                <p class="subtitle">
+                    Fill in the details below to create your prompt.
+                </p>
+
+                <div class="form-group">
+                    <label for="role">👤 Role</label>
+                    <input type="text" id="role"
+                    placeholder="Example: Act as a Python teacher">
+                </div>
+
+                <div class="form-group">
+                    <label for="task">🎯 Task</label>
+                    <textarea id="task"
+                    placeholder="What should the AI do?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="context">📚 Context</label>
+                    <textarea id="context"
+                    placeholder="Provide background information..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="constraints">⚙️ Constraints</label>
+                    <textarea id="constraints"
+                    placeholder="Example: Use simple English, under 200 words"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="format">📄 Output Format</label>
+                    <select id="format">
+                        <option value="">Select output format</option>
+                        <option value="Bullet points">Bullet Points</option>
+                        <option value="Paragraph">Paragraph</option>
+                        <option value="Table">Table</option>
+                        <option value="Step-by-step explanation">Step-by-step</option>
+                        <option value="Numbered list">Numbered List</option>
+                        <option value="Code">Code</option>
+                    </select>
+                </div>
+
+                <div class="buttons">
+                    <button class="generate-btn" onclick="generatePrompt()">
+                        ✨ Generate Prompt
+                    </button>
+
+                    <button class="clear-btn" onclick="clearPrompt()">
+                        Clear
+                    </button>
+                </div>
+
+                <!-- Sample Prompt -->
+                <div class="sample-box">
+                    <h3>💡 Sample Prompt</h3>
+                    <p>
+                        Act as a Python teacher. Explain loops in
+                        Python to a first-year college student.
+                        Use simple English and provide examples.
+                        Present the answer in bullet points.
+                    </p>
+                    <button class="sample-btn" onclick="loadSample()">
+                        Try Sample
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section">
+
+                <h2>Generated Prompt</h2>
+                <p class="subtitle">
+                    Your AI prompt will appear here.
+                </p>
+
+                <div class="output-box" id="output">
+                    <span class="placeholder">
+                        Your generated prompt will appear here...
+                    </span>
+                </div>
+
+                <button class="copy-btn" onclick="copyPrompt()">
+                    📋 Copy Prompt
+                </button>
+
+                <p id="message"></p>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>✦ PromptCraft AI | Built for Students</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
